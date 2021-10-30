@@ -1,29 +1,33 @@
 import styled from "styled-components";
 
 export const StyledProjectSlider = styled.div`
-  .slider-left {
-    position: absolute;
-    font-size: 10rem;
-    top: 40%;
-    left: 0rem;
-    z-index: 1;
-  }
-  .slider-right {
-    position: absolute;
-    font-size: 10rem;
-    top: 40%;
-    right: 0rem;
-    z-index: 1;
-  }
+  width: 100%;
+  min-height: 100%;
 
-  /* .slide {
-    opacity: 0;
-    transition-duration: 1s ease;
-  }
+  .project-card {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 2rem 4rem;
 
-  .slide.active {
-    opacity: 1;
-    transition-duration: 1s;
-    transform: scale(1.08);
-  } */
+    img {
+      width: 400px;
+      height: 400px;
+    }
+
+    @media (min-width: 768px) {
+      height: 100%;
+      display: flex;
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #a385d1;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #a385d1;
+  }
 `;

@@ -15,21 +15,29 @@ const Navbar = () => {
       <Link
         to="/"
         style={{ display: "flex", alignItems: "center", gap: "1rem" }}
+        onClick={() => setDropdown(!dropdown)}
       >
         <BsCodeSlash size={22} color="white" />
         <p>Hannah Eich</p>
       </Link>
+
+      <PageLinks dropdown={dropdown}>
+        <Link to="/about" onClick={() => setDropdown(!dropdown)}>
+          About
+        </Link>
+        <Link to="/projects" onClick={() => setDropdown(!dropdown)}>
+          Projects
+        </Link>
+        <Link to="/contact" onClick={() => setDropdown(!dropdown)}>
+          Contact
+        </Link>
+      </PageLinks>
 
       <Hamburger onClick={() => setDropdown(!dropdown)}>
         <span />
         <span />
         <span />
       </Hamburger>
-      <PageLinks dropdown={dropdown}>
-        <Link to="/about">About</Link>
-        <Link to="/projects">Projects</Link>
-        <Link to="/contact">Contact</Link>
-      </PageLinks>
     </StyledNavbar>
   );
 };
