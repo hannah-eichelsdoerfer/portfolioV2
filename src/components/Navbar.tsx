@@ -1,27 +1,34 @@
-import {
-  Hamburger,
-  PageLink,
-  PageLinks,
-  StyledNavbar,
-} from "../styles/StyledNavbar";
+import { Hamburger, PageLinks, StyledNavbar } from "../styles/StyledNavbar";
 import { BsCodeSlash } from "react-icons/bs";
 
+import { useState } from "react";
+
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
+  const [dropdown, setDropdown] = useState(false);
+
+  console.log(dropdown);
+
   return (
     <StyledNavbar>
-      <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+      <Link
+        to="/"
+        style={{ display: "flex", alignItems: "center", gap: "1rem" }}
+      >
         <BsCodeSlash size={22} color="white" />
         <p>Hannah Eich</p>
-      </div>
-      <Hamburger>
+      </Link>
+
+      <Hamburger onClick={() => setDropdown(!dropdown)}>
         <span />
         <span />
         <span />
       </Hamburger>
-      <PageLinks>
-        <PageLink href="/">About</PageLink>
-        <PageLink href="/">Projects</PageLink>
-        <PageLink href="/">Journey</PageLink>
+      <PageLinks dropdown={dropdown}>
+        <Link to="/about">About</Link>
+        <Link to="/projects">Projects</Link>
+        <Link to="/contact">Contact</Link>
       </PageLinks>
     </StyledNavbar>
   );

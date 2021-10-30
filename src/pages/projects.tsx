@@ -1,3 +1,13 @@
-const projects = () => {};
+import ProjectSlider from "../components/ProjectSlider";
+import { Main } from "../styles/Main";
 
-export default projects;
+const ProjectsPage = () => {
+  return (
+    <Main>
+      {/* <h1>Projects</h1> */}
+      <ProjectSlider />
+    </Main>
+  );
+};
+
+export default ProjectsPage;
