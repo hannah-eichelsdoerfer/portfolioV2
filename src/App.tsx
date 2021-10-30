@@ -16,6 +16,7 @@ function App() {
       <div
         style={{
           backgroundImage: `url(${background})`,
+          // filter: "grayscale(100%)",
           minHeight: "100vh",
           paddingBottom: "10rem",
         }}
