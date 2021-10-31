@@ -15,7 +15,7 @@ const Navbar = () => {
       <Link
         to="/"
         style={{ display: "flex", alignItems: "center", gap: "1rem" }}
-        onClick={() => setDropdown(!dropdown)}
+        onClick={() => setDropdown(false)}
       >
         <BsCodeSlash size={22} color="white" />
         <p>Hannah Eich</p>

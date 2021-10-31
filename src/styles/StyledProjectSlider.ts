@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const StyledProjectSlider = styled.div`
+  .swiper-container {
+    height: 100%;
+  }
   width: 100%;
   min-height: 100%;
 
@@ -26,6 +29,7 @@ export const StyledProjectSlider = styled.div`
   .swiper-button-prev,
   .swiper-button-next {
     color: #a385d1;
+    position: absolute;
   }
   .swiper-pagination-bullet-active {
     background-color: #a385d1;
